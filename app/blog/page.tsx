@@ -1,9 +1,7 @@
-import Image from 'next/image'
-
-export default function Blog() {
-  return (
-    <main>
-        <section className="Sub-header">
+import Link from 'next/link'
+function Blog() {
+    return(<>
+     <section className="Sub-header">
         <nav>
             <a href="index.html" className="logo">Xplore
                 <i className="fab fa-staylinked"></i>kill
@@ -12,11 +10,11 @@ export default function Blog() {
                 {/* <!-- reposnive bar open and close --> */}
                 <i className="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="course.html">Course</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li> <Link href='/' >Home</Link></li>
+                    <li> <Link href='course' >Course</Link></li>
+                    <li> <Link href='blog' >Blog</Link></li>
+                    <li> <Link href='about' >About</Link></li>
+                    <li> <Link href='contact' >Contact</Link></li>
                 </ul>
             </div>
             <i className="fa fa-bars" onclick="showMenu()"></i>
@@ -32,21 +30,21 @@ export default function Blog() {
             <div className="blog-left">
                 <h2>Our Certificate & Online Program</h2>
                 <h5>Aug 1, 2021</h5>
-                <img src="img/post.png" alt="">
+                <img src="img/post.png" alt=""/>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolor consequatur, nobis quae obcaecati delectus at aspernatur, placeat quasi iure mollitia. Repellendus a ut nostrum dolore velit odit cumque, quos doloribus sint id aperiam eius aliquam quo modi sequi rem quia exercitationem laborum, ratione expedita! Deleniti velit officia incidunt illum.</p>
-                <br>
+                <br/>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore corrupti blanditiis deserunt
                     incidunt itaque ut laudantium a amet omnis nihil, dolor doloribus. Voluptatum, accusantium? Quo,
                     aperiam nobis labore pariatur, esse vitae amet repellendus libero architecto nisi facere unde
                     ducimus perspiciatis, laudantium alias porro. Sapiente voluptatem eligendi at voluptatum optio
                     facilis?</p>
-                <br>
+                <br/>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore corrupti blanditiis deserunt
                     incidunt itaque ut laudantium a amet omnis nihil, dolor doloribus. Voluptatum, accusantium? Quo,
                     aperiam nobis labore pariatur, esse vitae amet repellendus libero architecto nisi facere unde
                     ducimus perspiciatis, laudantium alias porro. Sapiente voluptatem eligendi at voluptatum optio
                     facilis?</p>
-                <br>
+                <br/>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore corrupti blanditiis deserunt
                     incidunt itaque ut laudantium a amet omnis nihil, dolor doloribus. Voluptatum, accusantium? Quo,
                     aperiam nobis labore pariatur, esse vitae amet repellendus libero architecto nisi facere unde
@@ -56,9 +54,9 @@ export default function Blog() {
                 <div className="comment-box">
                     <h3>Leave a Comment</h3>
                     <form className="comment-form">
-                        <input type="text" placeholder="Enter Name" required>
-                        <input type="email" placeholder="Enter Email" required>
-                        <textarea rows="5" placeholder="Your Comment"></textarea>
+                        <input type="text" placeholder="Enter Name" required/>
+                        <input type="email" placeholder="Enter Email" required/>
+                        <textarea  placeholder="Your Comment"></textarea>
                         <button type="submit" className="hero_btn btn">POST COMMENT</button>
                     </form>
                 </div>
@@ -110,7 +108,8 @@ export default function Blog() {
         <p>Made with <i className="fas fa-heart"></i> by <a href="#">Sagar Developer</a></p>
         <p>Copyright © 2021 <a href="index.html">Xplore Skill</a>. All Rights Reserved</p>
     </section>
-   
-</main>
-  )
+    {/* <!-- Footer Section end --> */}
+    <br/>
+    </>);
 }
+export default Blog;
